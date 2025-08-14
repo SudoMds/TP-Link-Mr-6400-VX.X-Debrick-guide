@@ -1,21 +1,30 @@
-# TP-Link-Mr-6400-VX.X-Debrick-guide
-How to Debrick TP-Link Mr-6400 
-Some users tried to install openwrt on this model and then findout its useless because of this device limits on Size of overlay for installing needed plugins
-and then cant install original firmware and stuck on openwrt just read this simple guide and done.
+# TP-Link MR-6400 VX.X Debrick Guide
 
-# Requirements:
-- TFTP App
-- Router Original Firmware
+How to debrick a TP-Link MR-6400 router after failed OpenWRT installation.
 
-# How to:
- First download your MR-6400 just the version on the router label from here : https://www.tp-link.com/uk/support/download/tl-mr6400/
- for example if router is v5 you download v5 not v7.
- extract the archive file in a folder rename the .bin file to original.bin
- open cmd:
-   cd /where/yourfile
-- or you can right click in directory where .bin file is when holding Left Shift button and select open cmd here
- in cmd command :
-    powershell
--now you should copy the commands from file in repo command.txt  in powershell
+Some users try to install OpenWRT on this model but then find it useless due to the device's limitations on overlay size (for installing needed plugins). Afterward, they can't reinstall the original firmware and get stuck on OpenWRT. This simple guide will help you recover your device.
 
-- a new .bin file will created there named tp_recovery.bin run tftp select the file directory and let it flash it
+## Requirements:
+- TFTP application
+- Router's original firmware
+
+## Instructions:
+
+1. Download your MR-6400 firmware (matching the version on your router's label) from:
+   https://www.tp-link.com/uk/support/download/tl-mr6400/
+   - Example: If your router is v5, download v5 (not v7)
+
+2. Extract the archive file to a folder and rename the `.bin` file to `original.bin`
+
+3. Open Command Prompt:
+   - Navigate to your file's directory: `cd /where/yourfile`
+   - Alternative: Hold Left Shift + Right-click in the directory and select "Open command window here"
+
+4. In Command Prompt, run:
+   powesehll
+
+5. Now copy and run the commands from the `command.txt` file (in this repository) in PowerShell.
+
+6. A new `.bin` file named `tp_recovery.bin` will be created.
+
+7. Run your TFTP application, select the file directory, and let it flash the recovery firmware.   
