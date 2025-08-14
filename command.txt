@@ -1,0 +1,19 @@
+$inputFile = "original.bin"
+$outputFile = "tp_recovery.bin"
+$blockSize = 512
+$skipBlocks = 1
+$countBlocks = 16000
+
+$fsIn = [System.IO.File]::OpenRead($inputFile)
+$fsOut = [System.IO.File]::Create($outputFile)
+
+# Skip bytes
+$fsIn.Seek($skipBlocks * $blockSize, 'Begin') | Out-Null
+
+$buffer = New-Object byte[] ($blockSize * $countBlocks)
+$bytesRead = $fsIn.Read($buffer, 0, $buffer.Length)
+
+$fsOut.Write($buffer, 0, $bytesRead)
+
+$fsIn.Close()
+$fsOut.Close()
