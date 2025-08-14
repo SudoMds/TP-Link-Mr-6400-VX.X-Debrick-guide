@@ -8,13 +8,13 @@ and then cant install original firmware and stuck on openwrt just read this simp
 - Router Original Firmware
 
 # How to:
-- First download your MR-6400 just the version on the router label from here : https://www.tp-link.com/uk/support/download/tl-mr6400/
+ First download your MR-6400 just the version on the router label from here : https://www.tp-link.com/uk/support/download/tl-mr6400/
  for example if router is v5 you download v5 not v7.
-- extract the archive file in a folder rename the .bin file to original.bin
-- open cmd:
+ extract the archive file in a folder rename the .bin file to original.bin
+ open cmd:
    cd /where/yourfile
 - or you can right click in directory where .bin file is when holding Left Shift button and select open cmd here
-- in cmd command :
+ in cmd command :
     powershell
 -now you should copy the commands from file in repo command.txt  in powershell
 
